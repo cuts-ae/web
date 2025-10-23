@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cuts - Healthy Food Delivery Platform
 
-## Getting Started
+A beautiful, investor-ready marketing website for Cuts, UAE's first nutrition-focused food delivery platform.
 
-First, run the development server:
+## 🎨 Design Philosophy
 
+This website is built with a warm, inviting, and community-focused design language:
+
+- **Color Palette**: Soft whites, fresh greens, warm yellows
+- **Typography**: Large, readable, accessible
+- **Animations**: Smooth, delightful, performant
+- **Tone**: Welcoming, not corporate
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **React**: 19.1.0 with Server Components
+- **TypeScript**: Strict mode
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+
+## 📁 Project Structure
+
+```
+app/
+├── page.tsx              # Home page
+├── restaurants/          # For Restaurants page
+├── drivers/              # For Drivers page
+├── about/                # About page
+├── contact/              # Contact page
+├── layout.tsx            # Root layout with Navigation & Footer
+└── globals.css           # Global styles & design tokens
+
+components/
+├── navigation.tsx        # Sticky navigation with mobile menu
+├── footer.tsx            # Footer with links & social
+└── ui/                   # Reusable UI components
+    ├── button.tsx
+    ├── card.tsx
+    └── container.tsx
+```
+
+## 🎯 Features
+
+### Pages
+- **Home**: Hero, problem/solution, features, map, social proof, CTA
+- **For Restaurants**: Benefits, how it works, requirements, CTA
+- **For Drivers**: Benefits, how it works, requirements, stats, CTA
+- **About**: Story, mission, vision, values, investor section
+- **Contact**: Contact form, contact info, map
+
+### Components
+- Responsive navigation with sticky behavior
+- Smooth scroll animations with Framer Motion
+- Mobile-friendly with hamburger menu
+- Reusable UI components (Button, Card, Container)
+- SEO optimized with metadata for all pages
+
+## 🚀 Getting Started
+
+### Development
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev          # Start dev server with hot reload
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
+```bash
+npm run build        # Production build
+npm run start        # Start production server
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Linting
+```bash
+npm run lint         # Run ESLint
+```
 
-## Learn More
+## 🎨 Design System
 
-To learn more about Next.js, take a look at the following resources:
+### Colors
+- **Primary**: Fresh Green (#10B981, #34D399)
+- **Accent Yellow**: #FCD34D, #FDE68A
+- **Accent Orange**: #FB923C (for CTAs)
+- **Backgrounds**: #FEFEFE, #FFFBF5
+- **Neutrals**: Gray scale from 50-900
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Typography
+- **Font**: Geist Sans (primary), Geist Mono (code)
+- **Sizes**: Generous, accessible (4xl-7xl for headlines)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Spacing
+- Generous whitespace
+- Sections: py-24 (96px vertical padding)
+- Components: Rounded corners (rounded-2xl, rounded-3xl)
 
-## Deploy on Vercel
+## 📱 Responsive Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Mobile-first** approach
+- Breakpoints: sm (640px), md (768px), lg (1024px)
+- Touch-friendly interactions
+- Optimized for both mobile and desktop
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ♿ Accessibility
+
+- WCAG AA compliant
+- Semantic HTML
+- Keyboard navigation
+- Screen reader friendly
+- Focus indicators
+
+## 🚀 Deployment
+
+Ready to deploy to:
+- Vercel (recommended)
+- Netlify
+- AWS
+- Self-hosted
+
+## 📝 Notes for Investors
+
+This website is designed to:
+- Showcase the product vision clearly
+- Demonstrate professionalism and attention to detail
+- Build trust with warm, approachable design
+- Highlight market opportunity and traction
+- Provide clear CTAs for customers, restaurants, and drivers
+
+## 🔗 Links
+
+- Repository: https://github.com/cuts-ae/web.git
+- Contact: hello@cut.ae
+
+---
+
+© 2025 Cut. Made with care in UAE.

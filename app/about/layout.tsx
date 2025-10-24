@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Cut - Our Mission & Story",
-  description: "Learn about Cut's mission to make healthy eating accessible in the UAE. We're building a healthier future, one meal at a time.",
+  description: "Learn about Cut&apos;s mission to make healthy eating accessible in the UAE. We&apos;re building a healthier future, one meal at a time.",
   keywords: ["about Cut", "healthy food mission", "UAE startup", "food delivery story", "nutrition platform"],
   openGraph: {
     title: "About Cut - Our Mission & Story",

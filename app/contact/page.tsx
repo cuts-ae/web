@@ -106,7 +106,7 @@ export default function ContactPage() {
                 }}
                 className="text-6xl md:text-8xl font-bold text-[--foreground] tracking-tight"
               >
-                Let's talk
+                Let&apos;s talk
               </motion.h1>
 
               <motion.p
@@ -119,7 +119,7 @@ export default function ContactPage() {
                 }}
                 className="text-xl md:text-2xl text-[--muted-foreground] max-w-2xl mx-auto leading-relaxed"
               >
-                We'd love to hear from you. Send us a message and we'll respond
+                We&apos;d love to hear from you. Send us a message and we&apos;ll respond
                 as soon as possible.
               </motion.p>
             </motion.div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
                   Send us a message
                 </h2>
                 <p className="text-xl text-[--muted-foreground]">
-                  Fill out the form below and we'll get back to you within 24
+                  Fill out the form below and we&apos;ll get back to you within 24
                   hours
                 </p>
               </motion.div>
@@ -395,7 +395,7 @@ export default function ContactPage() {
                 Visit Our Office
               </h2>
               <p className="text-xl text-[--muted-foreground]">
-                We're based in the heart of Abu Dhabi
+                We&apos;re based in the heart of Abu Dhabi
               </p>
             </motion.div>
 

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Cuts" className="w-8 h-8" />
+            <Image src="/logo.png" alt="Cuts" width={32} height={32} className="w-8 h-8" />
             <span className="text-xl font-semibold text-black">Cuts</span>
           </Link>
 

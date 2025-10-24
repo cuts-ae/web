@@ -111,7 +111,7 @@ export default function AboutPage() {
                 }}
                 className="text-xl md:text-2xl text-[--muted-foreground] max-w-3xl mx-auto leading-relaxed"
               >
-                We're on a mission to make healthy eating accessible,
+                We&apos;re on a mission to make healthy eating accessible,
                 convenient, and enjoyable for everyone in Abu Dhabi.
               </motion.p>
             </motion.div>
@@ -228,12 +228,12 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-4 text-lg text-[--muted-foreground] leading-relaxed">
                     <p>
-                      We believe that good nutrition shouldn't be a luxury or
+                      We believe that good nutrition shouldn&apos;t be a luxury or
                       require hours of meal prep — it should be as easy as
                       ordering from your favorite restaurant.
                     </p>
                     <p>
-                      That's why we created Cuts - the first food delivery
+                      That&apos;s why we created Cuts - the first food delivery
                       platform in the UAE that puts health and nutrition at the
                       center.
                     </p>
@@ -436,7 +436,7 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="text-xl text-[--muted-foreground] leading-relaxed max-w-3xl mx-auto">
-                  We're addressing a massive market opportunity in the UAE's
+                  We&apos;re addressing a massive market opportunity in the UAE&apos;s
                   food delivery space by focusing on the rapidly growing health
                   and wellness segment. Our unique positioning combines
                   nutrition transparency, quality partnerships, and technology
@@ -496,11 +496,11 @@ export default function AboutPage() {
 
               <p className="text-lg text-[--muted-foreground]">
                 For press inquiries, partnership opportunities, or media
-                coverage, we'd love to hear from you.
+                coverage, we&apos;d love to hear from you.
               </p>
 
               <div className="pt-4">
-                <Button variant="outline" size="lg" className="group border-2">
+                <Button variant="secondary" size="lg" className="group">
                   <Mail className="mr-2 h-5 w-5" />
                   Press Contact
                 </Button>

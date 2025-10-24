@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   TrendingUp,
   DollarSign,
@@ -136,7 +136,7 @@ export default function RestaurantsPage() {
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Button>
-                <Button variant="outline" size="lg" className="group border-2">
+                <Button variant="secondary" size="lg" className="group">
                   View Partnership Details
                 </Button>
               </motion.div>
@@ -203,7 +203,7 @@ export default function RestaurantsPage() {
                 Why partner with <span className="text-[--primary]">Cuts</span>
               </h2>
               <p className="text-xl text-[--muted-foreground] max-w-2xl mx-auto">
-                We're building more than a platform — we're building a community
+                We&apos;re building more than a platform — we&apos;re building a community
               </p>
             </motion.div>
 

@@ -115,7 +115,7 @@ export default function DriversPage() {
               >
                 Flexible hours. Competitive pay. Supportive community.
                 <br />
-                Join Abu Dhabi's healthiest delivery platform.
+                Join Abu Dhabi&apos;s healthiest delivery platform.
               </motion.p>
 
               <motion.div
@@ -138,7 +138,7 @@ export default function DriversPage() {
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Button>
-                <Button variant="outline" size="lg" className="group border-2">
+                <Button variant="secondary" size="lg" className="group">
                   Learn More
                 </Button>
               </motion.div>

@@ -9,7 +9,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: "Cuts - Healthy Meals Delivered",
-  description: "UAE's first nutrition-focused food delivery platform",
+  description: "UAE&apos;s first nutrition-focused food delivery platform",
 };
 
 export default function RootLayout({

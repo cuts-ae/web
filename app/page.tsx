@@ -6,7 +6,6 @@ import { Footer } from "@/components/footer";
 import {
   Leaf,
   Zap,
-  DollarSign,
   Heart,
   Clock,
   Shield,
@@ -55,7 +54,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="text-2xl text-gray-600 mb-12"
           >
-            UAE's first nutrition-focused food delivery platform.
+            UAE&apos;s first nutrition-focused food delivery platform.
           </motion.p>
 
           <motion.div

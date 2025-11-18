@@ -78,7 +78,7 @@ interface TestimonialItem {
 const ANIMATION_CONFIG = {
   /** Standard fade-in-up animation duration */
   duration: 0.6,
-  /** Smooth easing curve matching Vercel's design */
+  /** Smooth easing curve for animations */
   ease: [0.22, 1, 0.36, 1] as const,
   /** Viewport margin for triggering scroll animations */
   viewportMargin: "-100px",

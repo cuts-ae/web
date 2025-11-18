@@ -90,7 +90,6 @@ interface EarningsStat {
 
 /**
  * Global animation settings for consistent motion design
- * Based on Vercel design system timing functions
  */
 const ANIMATION_CONFIG = {
   /** Standard animation duration in seconds */

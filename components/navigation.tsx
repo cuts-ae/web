@@ -14,7 +14,8 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -163,9 +164,9 @@ export function Navigation() {
             aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
-              <X className="h-5 w-5" aria-hidden="true" />
+              <CloseIcon sx={{ fontSize: 20 }} aria-hidden="true" />
             ) : (
-              <Menu className="h-5 w-5" aria-hidden="true" />
+              <MenuIcon sx={{ fontSize: 20 }} aria-hidden="true" />
             )}
           </button>
         </div>

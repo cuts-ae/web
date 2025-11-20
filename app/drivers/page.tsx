@@ -13,16 +13,16 @@
 
 import { motion } from "framer-motion";
 import {
-  DollarSign,
-  Clock,
-  Shield,
-  CheckCircle2,
+  AttachMoney,
+  AccessTime,
+  Security,
+  CheckCircle,
   Smartphone,
-  MapPin,
+  LocationOn,
   CreditCard,
   TrendingUp,
-  Award,
-} from "lucide-react";
+  EmojiEvents,
+} from "@mui/icons-material";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
@@ -129,19 +129,19 @@ export default function DriversPage() {
    */
   const benefits: BenefitItem[] = [
     {
-      icon: <DollarSign className="w-6 h-6" aria-hidden="true" />,
+      icon: <AttachMoney sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Competitive Earnings",
       description: "Earn AED 45-60/hour plus tips with weekly direct deposit payouts",
       color: "emerald",
     },
     {
-      icon: <Clock className="w-6 h-6" aria-hidden="true" />,
+      icon: <AccessTime sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Your Schedule",
       description: "Work when you want with flexible hours that fit your lifestyle",
       color: "blue",
     },
     {
-      icon: <Shield className="w-6 h-6" aria-hidden="true" />,
+      icon: <Security sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Support & Safety",
       description: "Insurance coverage and 24/7 support team always ready to help",
       color: "purple",
@@ -157,25 +157,25 @@ export default function DriversPage() {
       number: "01",
       title: "Apply Online",
       description: "Quick 10-minute application form. Upload your license and vehicle documents.",
-      icon: <Smartphone className="w-6 h-6" aria-hidden="true" />,
+      icon: <Smartphone sx={{ fontSize: 20 }} aria-hidden="true" />,
     },
     {
       number: "02",
       title: "Get Approved",
       description: "Background check completed within 1-2 business days. We'll notify you instantly.",
-      icon: <CheckCircle2 className="w-6 h-6" aria-hidden="true" />,
+      icon: <CheckCircle sx={{ fontSize: 20 }} aria-hidden="true" />,
     },
     {
       number: "03",
       title: "Start Delivering",
       description: "Download the driver app, go online, and start accepting orders immediately.",
-      icon: <MapPin className="w-6 h-6" aria-hidden="true" />,
+      icon: <LocationOn sx={{ fontSize: 20 }} aria-hidden="true" />,
     },
     {
       number: "04",
       title: "Get Paid Weekly",
       description: "Receive weekly direct deposits every Monday. Track your earnings in real-time.",
-      icon: <CreditCard className="w-6 h-6" aria-hidden="true" />,
+      icon: <CreditCard sx={{ fontSize: 20 }} aria-hidden="true" />,
     },
   ];
 
@@ -196,21 +196,21 @@ export default function DriversPage() {
    */
   const earningsStats: EarningsStat[] = [
     {
-      icon: <DollarSign className="w-6 h-6" aria-hidden="true" />,
+      icon: <AttachMoney sx={{ fontSize: 20 }} aria-hidden="true" />,
       label: "Average Hourly",
       value: "AED 45-60",
       description: "Including base pay + tips",
       color: "emerald",
     },
     {
-      icon: <TrendingUp className="w-6 h-6" aria-hidden="true" />,
+      icon: <TrendingUp sx={{ fontSize: 20 }} aria-hidden="true" />,
       label: "Top Earners",
       value: "AED 75+",
       description: "During peak hours",
       color: "blue",
     },
     {
-      icon: <Award className="w-6 h-6" aria-hidden="true" />,
+      icon: <EmojiEvents sx={{ fontSize: 20 }} aria-hidden="true" />,
       label: "Driver Rating",
       value: "4.8/5.0",
       description: "Average satisfaction score",
@@ -493,7 +493,7 @@ export default function DriversPage() {
                     className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-0.5"
                     aria-hidden="true"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                    <CheckCircle sx={{ fontSize: 16, color: "#059669" }} />
                   </div>
                   <span className="text-lg text-gray-700">
                     {requirement}

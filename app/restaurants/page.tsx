@@ -14,14 +14,14 @@
 import { motion } from "framer-motion";
 import {
   TrendingUp,
-  DollarSign,
-  BarChart3,
-  Users,
-  CheckCircle2,
-  Zap,
-  Target,
-  ChefHat,
-} from "lucide-react";
+  AttachMoney,
+  BarChart,
+  People,
+  CheckCircle,
+  Bolt,
+  Bullseye,
+  RestaurantMenu,
+} from "@mui/icons-material";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
@@ -43,7 +43,7 @@ interface StatItem {
  * Partnership benefit card data structure
  */
 interface BenefitItem {
-  /** Lucide React icon component */
+  /** Material UI icon component */
   icon: React.ReactNode;
   /** Benefit heading */
   title: string;
@@ -63,7 +63,7 @@ interface OnboardingStep {
   title: string;
   /** Detailed step description */
   description: string;
-  /** Lucide React icon component */
+  /** Material UI icon component */
   icon: React.ReactNode;
 }
 
@@ -112,37 +112,37 @@ export default function RestaurantsPage() {
    */
   const benefits: BenefitItem[] = [
     {
-      icon: <TrendingUp className="w-6 h-6" aria-hidden="true" />,
+      icon: <TrendingUp sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Reach New Customers",
       description: "Connect with health-conscious customers actively seeking nutritious meal options",
       color: "emerald",
     },
     {
-      icon: <DollarSign className="w-6 h-6" aria-hidden="true" />,
+      icon: <AttachMoney sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Fair Commission",
       description: "Only 15% commission with transparent pricing and no hidden fees",
       color: "yellow",
     },
     {
-      icon: <BarChart3 className="w-6 h-6" aria-hidden="true" />,
+      icon: <BarChart sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Powerful Dashboard",
       description: "Track orders, manage your menu, and view analytics in real-time",
       color: "blue",
     },
     {
-      icon: <Users className="w-6 h-6" aria-hidden="true" />,
+      icon: <People sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Dedicated Support",
       description: "Onboarding team to help you succeed from day one",
       color: "purple",
     },
     {
-      icon: <Target className="w-6 h-6" aria-hidden="true" />,
+      icon: <Bullseye sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Smart Matching",
       description: "AI-powered recommendations show your menu to the right customers",
       color: "pink",
     },
     {
-      icon: <Zap className="w-6 h-6" aria-hidden="true" />,
+      icon: <Bolt sx={{ fontSize: 20 }} aria-hidden="true" />,
       title: "Fast Payments",
       description: "Weekly direct deposits with detailed earnings breakdown",
       color: "orange",
@@ -158,25 +158,25 @@ export default function RestaurantsPage() {
       number: "01",
       title: "Sign Up",
       description: "Quick online registration process takes just 5 minutes. Provide basic details about your restaurant and menu.",
-      icon: <CheckCircle2 className="w-6 h-6" aria-hidden="true" />,
+      icon: <CheckCircle sx={{ fontSize: 20 }} aria-hidden="true" />,
     },
     {
       number: "02",
       title: "Add Your Menu",
       description: "Upload your menu items with nutrition info. Our team will help you get everything formatted perfectly.",
-      icon: <ChefHat className="w-6 h-6" aria-hidden="true" />,
+      icon: <RestaurantMenu sx={{ fontSize: 20 }} aria-hidden="true" />,
     },
     {
       number: "03",
       title: "Receive Orders",
       description: "Get real-time notifications and manage orders through our powerful restaurant dashboard.",
-      icon: <Zap className="w-6 h-6" aria-hidden="true" />,
+      icon: <Bolt sx={{ fontSize: 20 }} aria-hidden="true" />,
     },
     {
       number: "04",
       title: "Grow Together",
       description: "We handle delivery and customer service so you can focus on what you do best — making great food.",
-      icon: <TrendingUp className="w-6 h-6" aria-hidden="true" />,
+      icon: <TrendingUp sx={{ fontSize: 20 }} aria-hidden="true" />,
     },
   ];
 
@@ -466,7 +466,7 @@ export default function RestaurantsPage() {
                     className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-0.5"
                     aria-hidden="true"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                    <CheckCircle sx={{ fontSize: 20, color: "emerald" }} />
                   </div>
                   <span className="text-lg text-gray-700">
                     {requirement}

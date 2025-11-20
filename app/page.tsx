@@ -14,18 +14,16 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import {
-  Leaf,
-  Zap,
-  Heart,
-  Clock,
-  Shield,
-  Star,
-  Apple,
-  TrendingUp,
-  Users,
-  Award,
-} from "lucide-react";
+import AppleIcon from "@mui/icons-material/Apple";
+import PeopleIcon from "@mui/icons-material/People";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import StarIcon from "@mui/icons-material/Star";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import SecurityIcon from "@mui/icons-material/Security";
+import EmojiNatureIcon from "@mui/icons-material/EmojiNature";
+import BoltIcon from "@mui/icons-material/Bolt";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import StarsIcon from "@mui/icons-material/Stars";
 
 /**
  * Interface for stat cards in hero section
@@ -91,29 +89,29 @@ const ANIMATION_CONFIG = {
 export default function Home() {
   // Hero section stats data
   const stats: StatItem[] = [
-    { value: "50+", label: "Partner Restaurants", icon: <Users className="w-5 h-5" aria-hidden="true" /> },
-    { value: "10K+", label: "Happy Customers", icon: <TrendingUp className="w-5 h-5" aria-hidden="true" /> },
-    { value: "4.9", label: "Average Rating", icon: <Star className="w-5 h-5" aria-hidden="true" /> },
+    { value: "50+", label: "Partner Restaurants", icon: <PeopleIcon sx={{ fontSize: 20 }} aria-hidden="true" /> },
+    { value: "10K+", label: "Happy Customers", icon: <TrendingUpIcon sx={{ fontSize: 20 }} aria-hidden="true" /> },
+    { value: "4.9", label: "Average Rating", icon: <StarIcon sx={{ fontSize: 20 }} aria-hidden="true" /> },
   ];
 
   // Features section data
   const features: FeatureItem[] = [
     {
-      icon: <Leaf className="w-6 h-6" aria-hidden="true" />,
+      icon: <EmojiNatureIcon sx={{ fontSize: 24 }} aria-hidden="true" />,
       title: "Nutrition First",
       description:
         "Every meal is crafted with nutritional balance in mind. Macros, calories, and ingredients clearly labeled.",
       color: "emerald",
     },
     {
-      icon: <Zap className="w-6 h-6" aria-hidden="true" />,
+      icon: <BoltIcon sx={{ fontSize: 24 }} aria-hidden="true" />,
       title: "Lightning Fast",
       description:
         "Average delivery time of 25 minutes. Your healthy meal arrives fresh and hot, right when you need it.",
       color: "yellow",
     },
     {
-      icon: <Heart className="w-6 h-6" aria-hidden="true" />,
+      icon: <FavoriteIcon sx={{ fontSize: 24 }} aria-hidden="true" />,
       title: "Made with Love",
       description:
         "Premium quality at competitive prices. No hidden fees, transparent pricing on every order.",
@@ -123,9 +121,9 @@ export default function Home() {
 
   // Trust badges data
   const trustBadges: TrustBadgeItem[] = [
-    { icon: <Clock className="w-4 h-4" aria-hidden="true" />, text: "Real-time tracking" },
-    { icon: <Shield className="w-4 h-4" aria-hidden="true" />, text: "Food safety certified" },
-    { icon: <Award className="w-4 h-4" aria-hidden="true" />, text: "4.9 average rating" },
+    { icon: <AccessTimeIcon sx={{ fontSize: 16 }} aria-hidden="true" />, text: "Real-time tracking" },
+    { icon: <SecurityIcon sx={{ fontSize: 16 }} aria-hidden="true" />, text: "Food safety certified" },
+    { icon: <StarsIcon sx={{ fontSize: 16 }} aria-hidden="true" />, text: "4.9 average rating" },
   ];
 
   // How it works steps data
@@ -415,7 +413,7 @@ export default function Home() {
                     className="w-full bg-white text-gray-900 px-6 py-3 rounded-lg font-medium text-sm flex items-center justify-center gap-3 hover:bg-gray-100 transition-all duration-200 shadow-lg"
                     aria-label="Download Cuts app from App Store"
                   >
-                    <Apple className="w-5 h-5" aria-hidden="true" />
+                    <AppleIcon sx={{ fontSize: 20 }} aria-hidden="true" />
                     Download on App Store
                   </button>
                   <button
@@ -471,9 +469,9 @@ export default function Home() {
                 {/* 5-star rating */}
                 <div className="flex gap-1 mb-4" role="img" aria-label="5 star rating">
                   {[...Array(5)].map((_, i) => (
-                    <Star
+                    <StarIcon
                       key={i}
-                      className="w-4 h-4 text-yellow-400 fill-yellow-400"
+                      sx={{ fontSize: 16, color: "#FBBF24", fill: "#FBBF24" }}
                       aria-hidden="true"
                     />
                   ))}

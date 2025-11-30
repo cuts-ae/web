@@ -1,12 +1,7 @@
 import type { NextConfig } from "next";
-import { config } from "dotenv";
-import { resolve } from "path";
-
-// Load environment variables from root .env file
-config({ path: resolve(__dirname, "../.env") });
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Dev indicators are disabled by default in Next.js 15
 };
 
 export default nextConfig;

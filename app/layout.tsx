@@ -5,7 +5,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Cuts - Healthy Meals Delivered",
-  description: "UAE&apos;s first nutrition-focused food delivery platform",
+  description: "UAE's first nutrition-focused food delivery platform",
+  icons: {
+    icon: [
+      { url: "/logo.png", type: "image/png" },
+    ],
+    apple: "/logo.png",
+    shortcut: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -15,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>{children}</body>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans antialiased`}>{children}</body>
     </html>
   );
 }

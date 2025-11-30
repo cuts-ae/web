@@ -14,16 +14,17 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import AppleIcon from "@mui/icons-material/Apple";
-import PeopleIcon from "@mui/icons-material/People";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import StarIcon from "@mui/icons-material/Star";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import SecurityIcon from "@mui/icons-material/Security";
-import EmojiNatureIcon from "@mui/icons-material/EmojiNature";
-import BoltIcon from "@mui/icons-material/Bolt";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import StarsIcon from "@mui/icons-material/Stars";
+import { Grid } from "@/components/grid";
+import {
+  Apple,
+  Users,
+  TrendingUp,
+  Star,
+  Clock,
+  Shield,
+  Heart,
+  Zap
+} from "@/components/icons";
 
 /**
  * Interface for stat cards in hero section
@@ -89,29 +90,29 @@ const ANIMATION_CONFIG = {
 export default function Home() {
   // Hero section stats data
   const stats: StatItem[] = [
-    { value: "50+", label: "Partner Restaurants", icon: <PeopleIcon sx={{ fontSize: 20 }} aria-hidden="true" /> },
-    { value: "10K+", label: "Happy Customers", icon: <TrendingUpIcon sx={{ fontSize: 20 }} aria-hidden="true" /> },
-    { value: "4.9", label: "Average Rating", icon: <StarIcon sx={{ fontSize: 20 }} aria-hidden="true" /> },
+    { value: "50+", label: "Partner Restaurants", icon: <Users size={20} /> },
+    { value: "10K+", label: "Happy Customers", icon: <TrendingUp size={20} /> },
+    { value: "4.9", label: "Average Rating", icon: <Star size={20} /> },
   ];
 
   // Features section data
   const features: FeatureItem[] = [
     {
-      icon: <EmojiNatureIcon sx={{ fontSize: 24 }} aria-hidden="true" />,
+      icon: <Heart size={24} />,
       title: "Nutrition First",
       description:
         "Every meal is crafted with nutritional balance in mind. Macros, calories, and ingredients clearly labeled.",
       color: "emerald",
     },
     {
-      icon: <BoltIcon sx={{ fontSize: 24 }} aria-hidden="true" />,
+      icon: <Zap size={24} />,
       title: "Lightning Fast",
       description:
         "Average delivery time of 25 minutes. Your healthy meal arrives fresh and hot, right when you need it.",
       color: "yellow",
     },
     {
-      icon: <FavoriteIcon sx={{ fontSize: 24 }} aria-hidden="true" />,
+      icon: <Heart size={24} />,
       title: "Made with Love",
       description:
         "Premium quality at competitive prices. No hidden fees, transparent pricing on every order.",
@@ -121,9 +122,9 @@ export default function Home() {
 
   // Trust badges data
   const trustBadges: TrustBadgeItem[] = [
-    { icon: <AccessTimeIcon sx={{ fontSize: 16 }} aria-hidden="true" />, text: "Real-time tracking" },
-    { icon: <SecurityIcon sx={{ fontSize: 16 }} aria-hidden="true" />, text: "Food safety certified" },
-    { icon: <StarsIcon sx={{ fontSize: 16 }} aria-hidden="true" />, text: "4.9 average rating" },
+    { icon: <Clock size={16} />, text: "Real-time tracking" },
+    { icon: <Shield size={16} />, text: "Food safety certified" },
+    { icon: <Star size={16} />, text: "4.9 average rating" },
   ];
 
   // How it works steps data
@@ -174,85 +175,45 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="pt-28 pb-16 relative overflow-hidden"
+        className="pt-28 pb-16 bg-white min-h-[80vh] flex items-center justify-center relative"
         aria-labelledby="hero-heading"
       >
-        {/* Decorative dot grid background - purely visual */}
-        <div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[length:24px_24px]"
-          aria-hidden="true"
-        />
+        <Grid rows={7} columns={12}>
+          <Grid.Cross column={1} row={1} />
+          <Grid.Cross column={-1} row={-1} />
+        </Grid>
 
-        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          {/* Main heading with animation */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: ANIMATION_CONFIG.duration, ease: ANIMATION_CONFIG.ease }}
+        {/* Hero Text */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+          <motion.h1
+            id="hero-heading"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-7xl md:text-9xl text-gray-900"
+            style={{
+              fontFamily: 'Georgia, serif',
+              fontStyle: 'italic',
+              fontWeight: 300,
+            }}
           >
-            <h1 id="hero-heading" className="text-6xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight">
-              Healthy meals.
-              <br />
-              <span className="text-emerald-600">Delivered with care.</span>
-            </h1>
-          </motion.div>
-
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: ANIMATION_CONFIG.duration, delay: 0.1, ease: ANIMATION_CONFIG.ease }}
-            className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto"
-          >
-            UAE&apos;s first nutrition-focused food delivery platform.
-          </motion.p>
-
-          {/* Call-to-action buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: ANIMATION_CONFIG.duration, delay: 0.2, ease: ANIMATION_CONFIG.ease }}
-            className="flex gap-3 justify-center mb-16"
-          >
-            <button
-              className="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium text-sm shadow-[0_0_0_1px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.1)] hover:shadow-[0_0_0_1px_rgba(0,0,0,0.2),0_4px_8px_rgba(0,0,0,0.15)] hover:bg-gray-800 transition-all duration-200"
-              aria-label="Download Cuts app"
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Download App
-            </button>
-            <button
-              className="bg-white text-gray-900 px-6 py-3 rounded-lg font-medium text-sm shadow-[0_0_0_1px_rgba(0,0,0,0.1)] hover:shadow-[0_0_0_1px_rgba(0,0,0,0.2),0_2px_4px_rgba(0,0,0,0.1)] hover:bg-gray-50 transition-all duration-200"
-              aria-label="Learn about restaurant partnerships"
+              Nutrition Meets
+            </motion.span>
+            <br />
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent"
             >
-              For Restaurants
-            </button>
-          </motion.div>
-
-          {/* Stats grid */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: ANIMATION_CONFIG.duration, delay: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto"
-            role="region"
-            aria-label="Platform statistics"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="flex flex-col items-center"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="text-gray-400">{stat.icon}</div>
-                  <div className="text-4xl md:text-5xl font-bold tracking-tight">{stat.value}</div>
-                </div>
-                <div className="text-sm text-gray-500">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
+              AI Cloud
+            </motion.span>
+          </motion.h1>
         </div>
       </section>
 
@@ -413,7 +374,7 @@ export default function Home() {
                     className="w-full bg-white text-gray-900 px-6 py-3 rounded-lg font-medium text-sm flex items-center justify-center gap-3 hover:bg-gray-100 transition-all duration-200 shadow-lg"
                     aria-label="Download Cuts app from App Store"
                   >
-                    <AppleIcon sx={{ fontSize: 20 }} aria-hidden="true" />
+                    <Apple size={20} />
                     Download on App Store
                   </button>
                   <button
@@ -469,10 +430,11 @@ export default function Home() {
                 {/* 5-star rating */}
                 <div className="flex gap-1 mb-4" role="img" aria-label="5 star rating">
                   {[...Array(5)].map((_, i) => (
-                    <StarIcon
+                    <Star
                       key={i}
-                      sx={{ fontSize: 16, color: "#FBBF24", fill: "#FBBF24" }}
-                      aria-hidden="true"
+                      size={16}
+                      color="#FBBF24"
+                      className="fill-yellow-400"
                     />
                   ))}
                 </div>

@@ -14,14 +14,14 @@
 import { motion } from "framer-motion";
 import {
   TrendingUp,
-  AttachMoney,
+  DollarSign,
   BarChart,
-  People,
+  Users,
   CheckCircle,
-  Bolt,
-  Bullseye,
-  RestaurantMenu,
-} from "@mui/icons-material";
+  Zap,
+  Target,
+  Utensils,
+} from "@/components/icons";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
@@ -112,37 +112,37 @@ export default function RestaurantsPage() {
    */
   const benefits: BenefitItem[] = [
     {
-      icon: <TrendingUp sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <TrendingUp size={20} />,
       title: "Reach New Customers",
       description: "Connect with health-conscious customers actively seeking nutritious meal options",
       color: "emerald",
     },
     {
-      icon: <AttachMoney sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <DollarSign size={20} />,
       title: "Fair Commission",
       description: "Only 15% commission with transparent pricing and no hidden fees",
       color: "yellow",
     },
     {
-      icon: <BarChart sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <BarChart size={20} />,
       title: "Powerful Dashboard",
       description: "Track orders, manage your menu, and view analytics in real-time",
       color: "blue",
     },
     {
-      icon: <People sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <Users size={20} />,
       title: "Dedicated Support",
       description: "Onboarding team to help you succeed from day one",
       color: "purple",
     },
     {
-      icon: <Bullseye sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <Target size={20} />,
       title: "Smart Matching",
       description: "AI-powered recommendations show your menu to the right customers",
       color: "pink",
     },
     {
-      icon: <Bolt sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <Zap size={20} />,
       title: "Fast Payments",
       description: "Weekly direct deposits with detailed earnings breakdown",
       color: "orange",
@@ -158,25 +158,25 @@ export default function RestaurantsPage() {
       number: "01",
       title: "Sign Up",
       description: "Quick online registration process takes just 5 minutes. Provide basic details about your restaurant and menu.",
-      icon: <CheckCircle sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <CheckCircle size={20} />,
     },
     {
       number: "02",
       title: "Add Your Menu",
       description: "Upload your menu items with nutrition info. Our team will help you get everything formatted perfectly.",
-      icon: <RestaurantMenu sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <Utensils size={20} />,
     },
     {
       number: "03",
       title: "Receive Orders",
       description: "Get real-time notifications and manage orders through our powerful restaurant dashboard.",
-      icon: <Bolt sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <Zap size={20} />,
     },
     {
       number: "04",
       title: "Grow Together",
       description: "We handle delivery and customer service so you can focus on what you do best — making great food.",
-      icon: <TrendingUp sx={{ fontSize: 20 }} aria-hidden="true" />,
+      icon: <TrendingUp size={20} />,
     },
   ];
 
@@ -466,7 +466,7 @@ export default function RestaurantsPage() {
                     className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-0.5"
                     aria-hidden="true"
                   >
-                    <CheckCircle sx={{ fontSize: 20, color: "emerald" }} />
+                    <CheckCircle size={16} className="text-emerald-600" />
                   </div>
                   <span className="text-lg text-gray-700">
                     {requirement}

@@ -12,12 +12,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import EmailIcon from "@mui/icons-material/Email";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import PhoneIcon from "@mui/icons-material/Phone";
-import SendIcon from "@mui/icons-material/Send";
-import ChatIcon from "@mui/icons-material/Chat";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { Mail, MapPin, Phone, Send, MessageCircle, Clock } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Navigation } from "@/components/navigation";
@@ -46,8 +41,8 @@ interface ContactFormData {
  * Contact information card structure
  */
 interface ContactInfo {
-  /** Material UI icon component */
-  icon: typeof EmailIcon | typeof LocationOnIcon | typeof PhoneIcon;
+  /** Icon component */
+  icon: React.ComponentType<{ size?: number; color?: string; className?: string }>;
   /** Contact method title (e.g., "Email", "Phone") */
   title: string;
   /** Contact value (e.g., email address, phone number) */
@@ -89,21 +84,21 @@ const SUBJECT_OPTIONS: SubjectOption[] = [
  */
 const CONTACT_INFO: ContactInfo[] = [
   {
-    icon: EmailIcon,
+    icon: Mail,
     title: "Email",
     value: "hello@cuts.ae",
     link: "mailto:hello@cuts.ae",
     gradient: "from-blue-500 to-indigo-600",
   },
   {
-    icon: LocationOnIcon,
+    icon: MapPin,
     title: "Office",
     value: "Abu Dhabi, UAE",
     link: null,
     gradient: "from-emerald-500 to-teal-600",
   },
   {
-    icon: PhoneIcon,
+    icon: Phone,
     title: "Phone",
     value: "+971 XX XXX XXXX",
     link: "tel:+971XXXXXXXX",
@@ -267,7 +262,7 @@ export default function ContactPage() {
                 transition={{ duration: ANIMATION_CONFIG.duration, ease: ANIMATION_CONFIG.ease }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[--primary]/20 bg-white/50 backdrop-blur-sm"
               >
-                <ChatIcon sx={{ fontSize: 16 }} className="text-[--primary]" aria-hidden="true" />
+                <MessageCircle size={16} className="text-[--primary]" />
                 <span className="text-sm font-medium text-[--foreground]">
                   Get in Touch
                 </span>
@@ -370,7 +365,7 @@ export default function ContactPage() {
                       className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${info.gradient} mb-6 shadow-xl`}
                       aria-hidden="true"
                     >
-                      <info.icon sx={{ fontSize: 20, color: "white" }} />
+                      <info.icon size={20} color="white" />
                     </div>
 
                     {/* Contact method title */}
@@ -540,9 +535,9 @@ export default function ContactPage() {
                       aria-label="Submit contact form"
                     >
                       Send Message
-                      <SendIcon
-                        sx={{ fontSize: 20, marginLeft: 1, transition: "transform 0.2s", ".group-hover &": { transform: "translateX(4px)" } }}
-                        aria-hidden="true"
+                      <Send
+                        size={20}
+                        className="ml-2 transition-transform group-hover:translate-x-1"
                       />
                     </Button>
                   </form>
@@ -582,7 +577,7 @@ export default function ContactPage() {
                     className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm mb-6"
                     aria-hidden="true"
                   >
-                    <AccessTimeIcon sx={{ fontSize: 20, color: "white" }} />
+                    <Clock size={20} color="white" />
                   </div>
 
                   <h3
@@ -650,7 +645,7 @@ export default function ContactPage() {
                     className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-[--primary] to-[--primary-light] text-white mb-4 shadow-2xl"
                     aria-hidden="true"
                   >
-                    <LocationOnIcon sx={{ fontSize: 28, color: "white" }} />
+                    <MapPin size={28} color="white" />
                   </div>
 
                   {/* Office details */}
@@ -664,7 +659,7 @@ export default function ContactPage() {
 
                     {/* Business hours badge */}
                     <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[--border-light] text-sm font-medium text-[--foreground] shadow-lg">
-                      <AccessTimeIcon sx={{ fontSize: 16 }} className="text-[--primary]" aria-hidden="true" />
+                      <Clock size={16} className="text-[--primary]" />
                       <span>Mon - Fri: 9AM - 6PM</span>
                     </div>
                   </div>
